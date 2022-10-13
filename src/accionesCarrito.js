@@ -29,10 +29,10 @@ const agregarAlCarrito = (productoId) => {
 
     const div = document.createElement('div');
     div.classList.add('productoEnCarrito');
-    div.innerHTML = `<p>${producto.nombre}</p>
+    div.innerHTML = `<p>${producto.nombre}</p>                    
                     <p>Precio: ${producto.precio}</p>
                     <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
-                    <button id=eliminar${producto.id} value='${producto.id}' class='btn waves-effect waves-ligth boton-eliminar'> X </button>
+                    <button id=eliminar${producto.id} value='${producto.id}' class=' boton-eliminar'> X </button>
                     `;
     contenedor.appendChild(div);
     actualizarTotalesCarrito(carrito);
@@ -45,22 +45,43 @@ const pintarCarrito = (carrito) => {
 
     carrito.forEach(producto => {
         const div = document.createElement('div');
-        div.classList.add('productoEnCarrito');
-        div.innerHTML = `<p>${producto.nombre}</p>
+        div.classList.add('productoEnCarrito');        
+        div.innerHTML = `<p>${producto.nombre}</p>                        
                         <p>Precio: ${producto.precio}</p>
                         <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
-                        <button id=eliminar${producto.id} value='${producto.id}' class='btn waves-effect waves-ligth boton-eliminar'> X </button>
+                        <button id=eliminar${producto.id} value='${producto.id}' class=' boton-eliminar'> X </button>
                         `;
         contenedor.appendChild(div);
+        
     });
+    
 };
 
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
-
-    actualizarTotalesCarrito(carritoActualizado);
-    pintarCarrito(carritoActualizado);
+    Swal.fire({
+        title: 'Está seguro?',
+        text: 'Va a eliminar el producto!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#00ff00',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            actualizarTotalesCarrito(carritoActualizado);
+            pintarCarrito(carritoActualizado);
+            Swal.fire(
+                'Eliminado!',
+                'El producto ha sido eliminado correctamente.',
+                'success'
+            )
+        }
+    })
 };
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };
+
+

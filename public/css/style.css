@@ -29,7 +29,7 @@ h1 {
 
 #cesta-carrito {
   border: none;
-  color: rgb(168, 165, 0);;
+  color: #a8a500;;
   font-size: 30px;
   background-color: white;
   border-radius: 50%;
@@ -110,7 +110,7 @@ select {
   top: 15px;
   right: 15px;
   font-size: 20px;
-  color: rgb(0, 0, 0) !important;
+  color: hsl(0, 0%, 0%) !important;
   border: none;
   
 }
@@ -145,8 +145,8 @@ select {
 }
 
 .productoEnCarrito:hover {
-  border-left: 5px solid rgb(43, 173, 17);
-}
+  border-left: 5px solid rgb(168, 165, 0);
+} 
 
 .boton-eliminar {
   background-color: white;

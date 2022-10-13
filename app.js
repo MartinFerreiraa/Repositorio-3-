@@ -1,5 +1,7 @@
 import { validarProductoRepetido } from "./src/accionesCarrito.js";
 
+
+
 const mostrarProductos = (productos) => {
   const contenedorProductos = document.getElementById("producto-contenedor");
 
@@ -9,9 +11,11 @@ const mostrarProductos = (productos) => {
     div.innerHTML += `<div class="card-content">
                         <img src=${producto.img}>
                         <span class="card-title">${producto.nombre}</span>
+                        <p>${producto.categoria}</p>
+                        <a class="btn btn-success" id=boton${producto.detalle}>Detalles</a>
                         <p>Precio: $ ${producto.precio}</p>
                         <a class=" btn btn-warning" id=boton${producto.id}>Comprar</a>
-                        <p>Stock:${producto.stock}</p>`
+                        `
                                              
                         
     contenedorProductos.appendChild(div);
@@ -19,8 +23,19 @@ const mostrarProductos = (productos) => {
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
       validarProductoRepetido(producto.id);
+      Toastify({   
+                position : "center",                                          
+                text: 'Producto agregado al carrito',
+                duration: 1700,
+                style: {                   
+                  background: "#a8a500"                  
+                }
+            }).showToast();
     })
+    
   });
+  
 };
 
 export { mostrarProductos };
+
