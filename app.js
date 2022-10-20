@@ -1,9 +1,13 @@
 import { validarProductoRepetido } from "./src/accionesCarrito.js";
+import { obtenerProductos } from "./src/obtenerProductos.js";
 
 
 
-const mostrarProductos = (productos) => {
+const mostrarProductos = async ()  => {   
+  
+  
   const contenedorProductos = document.getElementById("producto-contenedor");
+  const productos = await obtenerProductos();
 
   productos.forEach(producto => {
     const div = document.createElement('div');
@@ -16,26 +20,27 @@ const mostrarProductos = (productos) => {
                         <p>Precio: $ ${producto.precio}</p>
                         <a class=" btn btn-warning" id=boton${producto.id}>Comprar</a>
                         `
-                                             
-                        
+
+
     contenedorProductos.appendChild(div);
 
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
       validarProductoRepetido(producto.id);
-      Toastify({   
-                position : "center",                                          
-                text: 'Producto agregado al carrito',
-                duration: 1700,
-                style: {                   
-                  background: "#a8a500"                  
-                }
-            }).showToast();
-    })
-    
+      Toastify({
+        position: "center",
+        text: 'Producto agregado al carrito',
+        duration: 1700,
+        style: {
+          background: "#a8a500"
+        }
+      }).showToast();
+    });
   });
+  
   
 };
 
-export { mostrarProductos };
+
+export { mostrarProductos, obtenerProductos };
 

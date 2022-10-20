@@ -3,7 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+footer{    
+  text-align:center;
+}
+form{
+  padding: 50px;
+}
+#input{
+  margin: 30px;
+  display: inline-block;
+   
+}
+section{
+  text-align: center;
+  border-radius: 10px;
+} 
 img {
   width: 100%;
   margin-bottom: 30px;
