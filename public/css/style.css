@@ -1,36 +1,56 @@
 * {
   margin: 0;
-  padding: 0;
-  
+  padding: 0;  
 }
-footer{    
+footer{  
+  background-color: rgb(224, 196, 153);
   text-align:center;
 }
+footer div{  
+  padding-top: 2% ;
+  padding-bottom: 0;
+}
 form{
-  padding: 50px;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  padding-top: 50px;
+}
+
+form div div{
+  padding-top: 40px;
 }
 
 #input{
-  margin: 30px;
-  display: inline-block;
-   
+  margin-top: 5%;
+  display: inline-block;   
 }
+
 section{
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.65ymas.com/uploads/s1/89/46/66/el-truco-definitivo-para-que-el-olor-del-perfume-dure-todo-el-di-a.jpeg");
   text-align: center;
   border-radius: 10px;
 } 
 img {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   border-radius: 10px !important;
 }
 
 header {
+  
   display: flex;
   justify-content: space-between;
   position: center;
   align-items: center;
-  padding: 20px 35px;  
+  padding: 10px 35px;  
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   }
 
@@ -59,11 +79,11 @@ h1 {
 
 #producto-contenedor {
   align-items: center;
-  gap: 2rem;
-  max-width: 70rem;
+  gap: 20px 50px;
+  max-width: 60rem;
   margin: 10px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap; 
 }
 
@@ -73,8 +93,8 @@ p {
 
 .card {
   text-align: center;
-  max-width: 31%;
-  padding: 21px;
+  max-width: 23%;
+  padding: 11px;
   border-radius: 40px;
 }
 
