@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 footer{    
   text-align:center;
@@ -9,6 +9,7 @@ footer{
 form{
   padding: 50px;
 }
+
 #input{
   margin: 30px;
   display: inline-block;
@@ -29,7 +30,7 @@ header {
   justify-content: space-between;
   position: center;
   align-items: center;
-  padding: 20px 10%;  
+  padding: 20px 35px;  
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   }
 
