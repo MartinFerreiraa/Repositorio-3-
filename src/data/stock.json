@@ -78,17 +78,5 @@
         "cantidad": 1,
         "stock":8,
         "detalle":"Sì Passione de Giorgio Armani es una fragancia de la familia olfativa Floral Frutal para Mujeres. Sì Passione se lanzó en 2017. Sì Passione fue creada por Christine Nagel y Julie Masse. Las Notas de Salida son pera, grosellas negras, pimienta rosa y toronja (pomelo); las Notas de Corazón son piña, rosa, jazmín y heliotropo; las Notas de Fondo son vainilla, cedro, Amberwood y pachulí."
-    },
-    {
-        "id": 9,
-        "nombre": "Moschino Toy Boy",
-        "categoria": "Hombre",        
-        "precio": 6900,
-        "img":"https://todoaplazo.com/images/products/6accad12-b81a-4bf2-ab90-69f7b30f9309-PERFUMEH-185.png",
-        "cantidad": 1,
-        "stock": 4,
-        "detalle":"Toy Boy de Moschino es una fragancia de la familia olfativa Amaderada Especiada para Hombres. Toy Boy se lanzó en 2019. La Nariz detrás de esta fragrancia es Yann Vasnier. Las Notas de Salida son pimienta rosa, pera, nuez moscada de Indonesia, elemí y bergamota; las Notas de Corazón son rosa, magnolia, clavo de olor y lino; las Notas de Fondo son cachemira, Sylkolide, vetiver de Haití, sándalo y ámbar."
     }
-
-
 ]

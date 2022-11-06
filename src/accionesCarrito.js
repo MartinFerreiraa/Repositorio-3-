@@ -1,9 +1,15 @@
 import { actualizarTotalesCarrito } from './actualizarCarrito.js';
 import { obtenerProductos } from './obtenerProductos.js';
-
 import { obtenerCarritoStorage } from './storage.js';
 
+
 let carrito = [];
+
+
+const finalizarCompra = document.getElementById("finalizar");
+finalizarCompra.addEventListener("click",()=>{ 
+    window.location.href = "./formulario.html";
+});
 
 const validarProductoRepetido = (productoId) => {
 
@@ -84,6 +90,8 @@ const eliminarProductoCarrito = (productoId) => {
     })
 };
 
-export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };
+
+
+export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito, finalizarCompra };
 
 

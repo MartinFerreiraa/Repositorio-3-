@@ -1,10 +1,7 @@
 import { validarProductoRepetido } from "./src/accionesCarrito.js";
 import { obtenerProductos } from "./src/obtenerProductos.js";
 
-
-
-const mostrarProductos = async ()  => {   
-  
+const mostrarProductos = async ()  => {  
   
   const contenedorProductos = document.getElementById("producto-contenedor");
   const productos = await obtenerProductos();
@@ -15,8 +12,7 @@ const mostrarProductos = async ()  => {
     div.innerHTML += `<div class="card-content">
                         <img src=${producto.img}>
                         <span class="card-title">${producto.nombre}</span>
-                        <p>${producto.categoria}</p>
-                        <a class="btn btn-success" id=boton${producto.detalle}>Detalles</a>
+                        <p>${producto.categoria}</p>                        
                         <p>Precio: $ ${producto.precio}</p>
                         <a class=" btn btn-warning" id=boton${producto.id}>Comprar</a>
                         `
@@ -37,8 +33,7 @@ const mostrarProductos = async ()  => {
       }).showToast();
     });
   });
-  
-  
+    
 };
 
 

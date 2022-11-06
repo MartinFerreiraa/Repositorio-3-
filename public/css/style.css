@@ -1,62 +1,65 @@
 * {
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
-footer{  
+
+footer {
+  margin: 0;
   background-color: rgb(224, 196, 153);
-  text-align:center;
+  text-align: center;
 }
-footer div{  
-  padding-top: 2% ;
+
+footer div {
+  padding-top: 2%;
   padding-bottom: 0;
 }
-form{
+
+#form {
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
   padding-top: 50px;
 }
 
-form div div{
+
+#form div div {
   padding-top: 40px;
 }
 
-#input{
-  margin-top: 5%;
-  display: inline-block;   
+#input {
+  margin-left: 35%;
+  text-align: center;
+  margin-top: 2%;
+  display: inline-block;
 }
-
-section{
+#buttonSus{
+  margin: 5%;
+  
+}
+#section2 {
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("https://www.65ymas.com/uploads/s1/89/46/66/el-truco-definitivo-para-que-el-olor-del-perfume-dure-todo-el-di-a.jpeg");
   text-align: center;
-  border-radius: 10px;
-} 
-img {
-  width: 100%;
-  margin-bottom: 25px;
-  border-radius: 10px !important;
 }
 
+
 header {
-  
   display: flex;
   justify-content: space-between;
   position: center;
   align-items: center;
-  padding: 10px 35px;  
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-  }
+  padding: 10px 35px;
+
+}
 
 h1 {
+  padding-left: 35%;
   color: rgb(168, 165, 0);
-  text-transform: uppercase;
   font-weight: 500px;
   font-size: 30px;
   margin: 0;
@@ -64,7 +67,7 @@ h1 {
 
 #cesta-carrito {
   border: none;
-  color: #a8a500;;
+  color: #a8a500;
   font-size: 30px;
   background-color: white;
   border-radius: 50%;
@@ -72,30 +75,49 @@ h1 {
   transition: all .3s;
 }
 
-
 #cesta-carrito:focus {
   outline: none;
 }
 
+#section {
+  height: 300px;
+  width: 100%;
+  background-image: url("https://c8.alamy.com/compes/2hh5tb6/botella-de-perfume-y-petalos-de-flores-sobre-fondo-beige-pastel-cosmeticos-naturales-con-aceite-aromatico-diseno-para-publicidad-de-productos-espacio-de-copia-banner-f-2hh5tb6.jpg");
+}
+
+#section div {
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-left: 28%;
+}
+
+#section div p {
+  font-size: medium;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 #producto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px 50px;
-  max-width: 60rem;
   margin: 10px auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; 
 }
 
 p {
   line-height: 2;
 }
 
+img {
+  width: 90%;
+}
+
 .card {
+  border: none !important;
   text-align: center;
   max-width: 23%;
-  padding: 11px;
-  border-radius: 40px;
+  padding: 10px;
+
 }
 
 select {
@@ -105,6 +127,11 @@ select {
 }
 
 .modal-contenedor {
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.modaes.com/files/000_2016/avon/avon-tienda-interior-728.jpg");
   position: fixed;
   top: 0;
   width: 100%;
@@ -112,8 +139,8 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .8s;
-  visibility: hidden;  
+  transition: all .1s;
+  visibility: hidden;
 }
 
 .modal-active {
@@ -147,7 +174,7 @@ select {
   font-size: 20px;
   color: hsl(0, 0%, 0%) !important;
   border: none;
-  
+
 }
 
 .modal-carrito #btn-cerrar-carrito:hover {
@@ -163,7 +190,7 @@ select {
 }
 
 .card .card-image .card-title {
-  color: rgb(0, 0, 0);
+
   display: flex;
   align-items: center;
   position: center
@@ -181,7 +208,7 @@ select {
 
 .productoEnCarrito:hover {
   border-left: 5px solid rgb(168, 165, 0);
-} 
+}
 
 .boton-eliminar {
   background-color: white;
@@ -197,3 +224,4 @@ select {
 .boton-eliminar:focus {
   outline: none;
 }
+
